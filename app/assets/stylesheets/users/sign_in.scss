@@ -1,0 +1,31 @@
+
+.signin_page{
+    max-width: 600px;
+    text-align: center;
+    margin:50px auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+}
+
+.signinHeader{
+    font-size: 13px;
+    margin-left: 30px;
+}
+
+.must {
+    color: #FFF;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 3px;
+    margin-right: 10px;
+    padding: 5px ;
+    letter-spacing: 0.2em;
+}
+
+.login_button {
+    margin-left:40px;
+    font-size:13px;
+    width: 250px;
+}

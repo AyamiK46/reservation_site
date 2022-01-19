@@ -1,0 +1,37 @@
+
+<div class="container">
+<div class="row">
+
+  <div class="row col-8 room_detail">
+    <img> 
+
+    <div class="room_deatail_header">
+      <div class="room_owner_icon">
+        <a href="/">
+          <img class="owner-icon" src="/assets/default_icon.jpg">
+        </a>
+      </div>
+
+      <div class="room_area_detail">
+        <p class="show_room_name">@room.room_name</p>
+        <p class="show_room_adress">@room.address</p>
+      </div>
+    </div>
+
+    <div class="show_room_intro">
+       <p class="show_room_main">@room.room_introduction</p>
+    </div>
+
+    <div class="row col-4 reservation_system_bar">
+    <div class="show_fee_detail">¥ @room.fee /日</div>
+    <%= form_with model:@room, local: true do |f| %>
+      <form>
+      </form> 
+    <% end %>
+    </div>
+  
+
+  </div>
+
+</div>
+</div>
