@@ -4,7 +4,6 @@ class ReservationsController < ApplicationController
 
   def new
     @room = Room.find(params[:id])
-    binding.pry
     @reservation = Reservation.new(reservation_params)
   end
 
