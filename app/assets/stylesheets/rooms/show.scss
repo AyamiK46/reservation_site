@@ -1,0 +1,48 @@
+
+
+.big-room-picture{
+    margin-top:3rem;
+}
+
+
+
+.owner-icon{
+    display: flex;
+}
+
+.icon-itself{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-top:1.5rem;
+}
+
+.room_area_detail{
+    margin-top:1.5rem;
+}
+
+.show_room_name{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    font-family: verdana, arial, helvetica,
+}
+
+.show_room_adress{
+    font-size: 14px;
+    font-family: verdana, arial, helvetica;
+}
+
+.show_room_main{
+    font-size: 16px;
+    font-family: verdana, arial, helvetica;
+    padding-top: 0.7rem;
+}
+
+
+.reservation_system_bar{
+    margin-top:3rem;
+    padding: 1.25rem;
+    border: 1px solid #eaedef;
+}

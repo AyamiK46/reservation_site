@@ -3,47 +3,49 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .registraion_for_room{
-    max-width: 800px;
-    margin:1.5rem auto;
+    max-width:100%;
     text-align: center;
-    padding: 24px;
+    margin:4rem auto;
+    padding: 1.5rem;
     background-color: white;
     border-radius: 4px;
     border: 1px #ddd solid;
 }
 
-table {
-    margin:auto;
+.roomHeader{
+    margin-top:1.25rem;
 }
 
-.col-lg-2{
-    padding-top:20px;
+
+.side-bar-content{
+    padding-top:1.25rem;
     border-right: 1px gainsboro solid;
 }
 
-.side-bar-content{
-    border-right: 3px solid #4a90e2;
+.room-content{
+    white-space: nowrap;    
 }
 
-.room-info{
-text-decoration: none;
-float:right;
+.basic-info{
+    text-decoration: none;
+    text-align:center;
+    border-right: 3px solid hsl(212, 72%, 59%);
+}
+
+label{
+    white-space: nowrap;
+}
+
+.must{
+    white-space: nowrap;
 }
 
 .new_form{
     display: block;
-    width: 500px;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1;
-    color: #495057;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    margin:20px;
 }
 
 .making_room_button{

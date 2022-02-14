@@ -1,10 +1,6 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.all
-  end
-
-  def show
-    @room = Room.find(params[:id])
+    @rooms = current_user.rooms
   end
 
   def new
@@ -12,12 +8,17 @@ class RoomsController < ApplicationController
   end
 
   def create
-    room = Room.new(room_params)
+    room = Room.new(room_params.merge(user_id: current_user.id))
     if room.save!
-      redirect_to room_path(room), notice:"新しいルームを登録しました。"
+      redirect_to rooms_path, notice:"新しいルームを登録しました。"
     else
       render new
     end
+  end
+
+  def show
+    @room = Room.find(params[:id])
+    @reservation = Reservation.new
   end
 
   private

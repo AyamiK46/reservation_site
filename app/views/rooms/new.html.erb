@@ -1,13 +1,17 @@
-<div class="container m-5">
+<div class="container-fluid mt-5">
   <div class="row">
     <div class="col-2 side-bar-content">
-       <a class="room-info" href= "/">基本情報</a>
+        <ul>
+          <li class="room-content">
+            <a href="/rooms/new" class="basic-info">基本情報</a>
+          </li>
+        </ul>
     </div>
 
-    <div class="col-10 registraion_for_room">
-      
-      <div class = "roomHeader room-content">
-        <p>ルーム情報登録</p>
+    <div class="col-10">
+      <div class="registraion_for_room">
+      <div class = "roomHeader">
+        <p class="room-content">ルーム情報登録</p>
       </div>
     
         <%= form_with model:@room, local:true do |f| %>
@@ -54,7 +58,8 @@
         </div>
     
         <% end %>
-    
+      </div>
+      </div>
     </div>
 
   </div>

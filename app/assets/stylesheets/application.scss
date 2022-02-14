@@ -11,8 +11,8 @@
 @import "users/sign_in";
 
 @import "rooms";
-
-
+@import "rooms/new";
+@import "rooms/show";
 
 
 li{
@@ -63,4 +63,9 @@ footer{
     color: #fff;
     text-align: center;
     font-size:8px;
+}
+
+.index-body{
+    vertical-align: middle;
+    white-space: nowrap;
 }

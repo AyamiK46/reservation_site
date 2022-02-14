@@ -1,37 +1,72 @@
+<div class="new_reservation_page container m-3">
+  <div class = "row">
 
-<div class="container">
-<div class="row">
-
-  <div class="row col-8 room_detail">
-    <img> 
-
-    <div class="room_deatail_header">
-      <div class="room_owner_icon">
-        <a href="/">
-          <img class="owner-icon" src="/assets/default_icon.jpg">
-        </a>
+    <div class="col-lg-8 col-md-8 col-sm-8">
+    <div class="show-detail">
+      <div class="big-room-picture">
+        <%= image_tag(@room.room_image.url(:thumb)) %>
       </div>
 
-      <div class="room_area_detail">
-        <p class="show_room_name">@room.room_name</p>
-        <p class="show_room_adress">@room.address</p>
+      <table class="table">
+        <tr>
+          <th>
+            <div class="owner-icon">
+              <a href= "/">
+                <img class="icon-itself" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/default_icon.jpg">
+              </a>
+            </div>
+          </th>
+          <td>
+            <div class="room_area_detail">
+              <p class="show_room_name"><%= @room.room_name %></p>
+              <p class="show_room_adress"><%= @room.address %></p>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+        <td>
+          <div class="show_room_intro">
+            <p class="show_room_main"><%= @room.room_introduction %></p>
+          </div>
+        </td>
+        </tr>
+      </table>
+    
+    </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      <div class="reservation_system_bar">
+
+        <p class="show_price">¥ <%= @room.fee %> / 日</p>
+
+        <%= form_with model:@reservation, url: reservations_path(@reservation) do |f| %>  
+           
+          　<%= f.label :start, "開始日" %>
+      　    <%= f.date_field :start, class: "form-control", placeholder:"年/月/日" %>
+  
+      　    <%= f.label:end, "終了日" %>
+      　    <%= f.date_field :end, class: "form-control", placeholder:"年/月/日" %>
+  
+      　    <%= f.label:guests, "人数" %>
+      　    <%= f.number_field :guests, class: "form-control" %>
+          
+          　<%= hidden_field_tag :id, @room.id %>
+
+      　  <div class="reserve_room">
+      　    <%= f.submit "予約する", class: "btn btn-primary btn-block reserve_room_button"%>
+      　  </div>
+
+        <% end %>
+
       </div>
-    </div>
-
-    <div class="show_room_intro">
-       <p class="show_room_main">@room.room_introduction</p>
-    </div>
-
-    <div class="row col-4 reservation_system_bar">
-    <div class="show_fee_detail">¥ @room.fee /日</div>
-    <%= form_with model:@room, local: true do |f| %>
-      <form>
-      </form> 
-    <% end %>
     </div>
   
-
   </div>
+</div>
 
-</div>
-</div>
+
+
+

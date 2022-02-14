@@ -1,6 +1,7 @@
 class RoomImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
+  require 'carrierwave/processing/mini_magick'
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
@@ -14,7 +15,11 @@ class RoomImageUploader < CarrierWave::Uploader::Base
   end
 
   
-  process :resize_to_fit => [300, 300]
+  process :resize_to_fit => [250, 250]
+
+  version :thumb do
+    process resize_to_fit: [600,600]
+  end
  
   
   # Provide a default URL as a default if there hasn't been a file uploaded:

@@ -5,3 +5,7 @@
 //= require bootstrap-sprockets
 //= require require_tree .
 
+document.addEventListener("turbolinks:load", function() {
+    // ...
+  })
+  
