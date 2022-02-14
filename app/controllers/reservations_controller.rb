@@ -4,8 +4,8 @@ class ReservationsController < ApplicationController
 
   def new
     @room = Room.find(params[:id])
+    binding.pry
     @reservation = Reservation.new(reservation_params)
-    render :new if @reservation.invalid?
   end
 
   def create 
@@ -21,6 +21,6 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.permit(:room_id, :user_id, :reservation_id, :start, :end, :guests, :fee )
+    params.require(:reservation).permit(:start, :end_date, :guests, :fee)
   end
 end

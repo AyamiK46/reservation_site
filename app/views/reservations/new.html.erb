@@ -13,13 +13,13 @@
       <%= f.text_field :start, :readonly => true %>
     
       <%= f.label:end, "終了日" %>
-      <%= f.text_field :end, :readonly => true %>
+      <%= f.text_field :end_date, :readonly => true %>
     
-      <p>使用日数： 日</p>
+      <p>使用日数：<%= @reservation.total_day %> 日</p>
 
       <p>人数 : <%= f.number_field :guests, :readonly => true %>人</p>
     
-      <label>合計金額</label>
+      <label>合計金額:<%= @reservation.total %></label>
 
       <%= hidden_field_tag :id, @room.id %>
   
