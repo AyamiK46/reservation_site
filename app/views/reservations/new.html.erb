@@ -6,6 +6,8 @@
     
     <p class="confirm_title">予約内容確認</p>
     <%= form_with model: @reservation do |f| %>
+
+      <%= hidden_field_tag :id, @room.id %>
     
       <p class="show_price">¥<%= @room.fee %> / 日</p>
     
@@ -20,8 +22,6 @@
       <p>人数 : <%= f.number_field :guests, :readonly => true %>人</p>
     
       <label>合計金額:<%= @reservation.total %></label>
-
-      <%= hidden_field_tag :id, @room.id %>
   
       <div class="reserve_room">
         <%= f.submit "予約を確定", class: "btn btn-primary btn-block" %>

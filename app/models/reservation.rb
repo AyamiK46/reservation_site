@@ -5,13 +5,14 @@ class Reservation < ApplicationRecord
   validates :guests, presence: true, numericality: true
 
   belongs_to :room 
+  belongs_to :user
 
   def total_day
     (self.end_date - self.start).to_i
   end
 
   def total
-    self.total_day.to_i * self.guests.to_i * @room.fee.to_i
-  end 
+    self.total_day.to_i * self.guests.to_i * self.room.fee
+  end
 
 end

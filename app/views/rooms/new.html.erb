@@ -15,7 +15,8 @@
       </div>
     
         <%= form_with model:@room, local:true do |f| %>
-    
+        <%= hidden_field_tag :id, @room.id %>
+
         <table class="table">
           <div class = "form-group col-xs-4 room-content">
           <tr>
