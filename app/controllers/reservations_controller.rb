@@ -10,7 +10,7 @@ class ReservationsController < ApplicationController
 
   def create 
     @reservation = Reservation.new(reservation_params)
-    # render :new and return if params[:back] || !@user.save
+    render :new and return if params[:back] || !@user.save
     redirect_to @reservation
   end
 
