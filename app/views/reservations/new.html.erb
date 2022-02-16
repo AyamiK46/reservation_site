@@ -6,8 +6,7 @@
     
     <p class="confirm_title">予約内容確認</p>
     <%= form_with model: @reservation do |f| %>
-
-      <%= hidden_field_tag :room_id, @room.id %>
+      <%= hidden_field_tag :id, @room.id %>
     
       <p class="show_price">¥<%= @room.fee %> / 日</p>
     
