@@ -5,12 +5,12 @@ class ReservationsController < ApplicationController
   def new
     @room = Room.find(params[:id])
     @reservation = Reservation.new(reservation_params)
-    render :new if @reservation.invalid?
+    render "rooms/show" if @reservation.invalid?
   end
 
   def create 
     @reservation = Reservation.new(reservation_params)
-    render :new and return if params[:back] || !@user.save
+    render "rooms/show" and return if params[:back] || !@user.save
     redirect_to @reservation
   end
 
@@ -21,6 +21,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:start, :end_date, :guests, :fee)
+    params.require(:reservation).permit(:start, :end_date, :guests, :fee).merge(user_id: current_user.id, room_id: params[:room_id])
   end
+
 end

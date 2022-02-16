@@ -2,14 +2,15 @@
 
 one:
   start: 2022-01-11
-  end: 2022-01-11
+  end_date: 2022-01-11
   guests: 
   total_day: MyString
   total: 
 
 two:
   start: 2022-01-11
-  end: 2022-01-11
+  end_date: 2022-01-11
   guests: 
   total_day: MyString
   total: 
+    

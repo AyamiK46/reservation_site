@@ -7,14 +7,14 @@
     <p class="confirm_title">予約内容確認</p>
     <%= form_with model: @reservation do |f| %>
 
-      <%= hidden_field_tag :id, @room.id %>
+      <%= hidden_field_tag :room_id, @room.id %>
     
       <p class="show_price">¥<%= @room.fee %> / 日</p>
     
       <%= f.label :start, "開始日" %>
       <%= f.text_field :start, :readonly => true %>
     
-      <%= f.label:end, "終了日" %>
+      <%= f.label:end_date, "終了日" %>
       <%= f.text_field :end_date, :readonly => true %>
     
       <p>使用日数：<%= @reservation.total_day %> 日</p>
