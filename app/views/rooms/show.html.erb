@@ -42,7 +42,7 @@
 
         <p class="show_price">¥ <%= @room.fee %> / 日</p>
 
-        <%= form_with model:@reservation, url: reservations_path(@reservation) do |f| %>  
+        <%= form_with model:@reservation, url: new_reservation_path, method: :get do |f| %>  
         
           <%= f.label :start, "開始日" %>
           <%= f.date_field :start, class: "form-control", placeholder:"年/月/日" %>  

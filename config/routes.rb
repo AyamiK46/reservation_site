@@ -4,10 +4,7 @@ Rails.application.routes.draw do
 
   resources :rooms
     
-  resources :reservations, only: [:index, :create, :show] do
-    collection do
-      post :new
-    end
+  resources :reservations, only: [:new, :index, :create, :show] do
   end
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
