@@ -7,9 +7,9 @@
     <p class="confirm_title">予約内容確認</p>
     <%= form_with model: @reservation do |f| %>
       <%= hidden_field_tag :id, @room.id %>
-    
+
       <p class="show_price">¥<%= @room.fee %> / 日</p>
-    
+      
       <%= f.label :start, "開始日" %>
       <%= f.text_field :start, :readonly => true %>
     
