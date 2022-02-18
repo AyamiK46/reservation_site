@@ -1,2 +1,37 @@
-<h1>Reservations#index</h1>
-<p>Find me in app/views/reservations/index.html.erb</p>
+
+<div class="reservation_index_page m-5">
+
+    <div class="reservation_index_header">
+        <h5>予約済みルーム一覧</h5>
+    </div>
+
+    <div class="reservation_index_body">
+        <table class="table">
+
+            <tr class="reservation-index-title">
+                <th class="reservation-title-head">ルーム画像</th>
+                <th class="reservation-title-head">ルーム名</th>
+                <th class="reservation-title-head">ルーム紹介</th>
+                <th class="reservation-title-head">合計料金</th>
+                <th class="reservation-title-head">開始日</th>
+                <th class="reservation-title-head">終了日</th>
+                <th class="reservation-title-head">予約確定日</th>
+            </tr>
+
+            <% @reservations.each do |reservation| %>
+                <tr class="reservation-table-body">
+                    <td class="reservation-room-image">
+                        <a class="room-image"><%= link_to image_tag(room.room_image.url), room_path(room.id) %></a>
+                    </td>
+                    <td class="reservation-index-body"><%= link_to room.room_name, room_path(room.id) %></td>
+                    <td class="reservation-index-body"><%= room.room_introduction %></td>
+                    <td class="reservation-index-body">¥<%= reservation.total %></td>
+                    <td class="reservation-index-body"><%= reservation.start %></td>
+                    <td class="reservation-index-body"><%= reservation.end_date %></td>
+                    <td class="reservation-index-body"><%= reservation.created_at %></td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+
+</div>
