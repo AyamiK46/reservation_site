@@ -1,0 +1,43 @@
+
+
+h5 {
+    font-size: 1.25rem;
+}
+
+.reservation_index_header{
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.reservation-index-title{
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+    white-space: nowrap;
+}
+
+.reservation-title-head{
+    padding: 8px 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.reservation-table-body{
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-align:center;
+    vertical-align: center;
+}
+
+.reservation-index-body{
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.room-image-mini{
+    width: 240px;
+    height: 140px;
+    object-fit: cover;
+}
