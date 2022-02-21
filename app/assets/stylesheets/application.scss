@@ -14,8 +14,9 @@
 @import "rooms/new";
 @import "rooms/show";
 
+@import "reservations";
 @import "reservations/new";
-
+@import "reservations/show";
 
 li{
     list-style: none;
