@@ -1,24 +1,22 @@
-<h1>Reservations#show</h1>
-<p>Find me in app/views/reservations/show.html.erb</p>
 
 
-<div class="reservation_complete_page container m-3">
+<div class="reservation_complete_page container m-5">
 <div class = "row">
 
-    <table class="table">
+    <table class="table reserved-room-show m-5">
 
       <tr>
         <th>
-          <p　class="reserved-room">予約した部屋</p>
+          <p class="reserved-room">予約した部屋</p>
         </th>
         <td>
-          <p class="reserved_room_name"><%= @room.room_name %></p>
+          <p class="reserved_room_name"><%= @reservation.room.room_name %></p>
         </td>   
       </tr>
 
       <tr>
         <th>
-          <p　class="complete_start">開始日</p>
+          <p class="complete_start">開始日</p>
         </th>
         <td>
           <p class="reserved_start"><%= @reservation.start %></p>
@@ -27,7 +25,7 @@
 
       <tr>
         <th>
-          <p　class="complete_start">終了日</p>
+          <p class="complete_start">終了日</p>
         </th>
         <td>
           <p class="reserved_end"><%= @reservation.end_date %></p>
@@ -36,10 +34,10 @@
 
       <tr>
         <th>
-          <p　class="complete_total_fee"><%= @reservation.fee %></p>
+          <p class="complete_total_fee">価格</p>
         </th>
         <td>
-          <p class="reserved_fee"><%= @reservation.total %></p>
+          <p class="reserved_fee"><%= @reservation.total %>円</p>
         </td>   
       </tr>
 
