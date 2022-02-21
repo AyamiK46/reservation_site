@@ -21,6 +21,11 @@ class RoomsController < ApplicationController
     @reservation = Reservation.new
   end
 
+  def search
+    @rooms = Room.where('items.title LIKE(?)', "%#{params[:search]}%").order(created_at: :desc)
+    @search_result = "#{params[:search]}"
+  end
+
   private
 
     def room_params
