@@ -10,8 +10,10 @@ class ReservationsController < ApplicationController
   end
 
   def create 
+    @room = Room.find(params[:id])
     @reservation = Reservation.new(reservation_params)
-    render "rooms/show" and return if params[:back] || @user.save!
+    render "rooms/show" and return if params[:back] || !@reservation.save
+    binding.pry
     redirect_to @reservation
   end
 
