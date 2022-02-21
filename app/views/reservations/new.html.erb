@@ -6,6 +6,7 @@
     
     <p class="confirm_title">予約内容確認</p>
     <%= form_with model: @reservation do |f| %>
+    
       <%= hidden_field_tag :id, @room.id %>
 
       <p class="show_price">¥<%= @room.fee %> / 日</p>
@@ -18,6 +19,7 @@
     
       <p>使用日数：<%= @reservation.total_day %> 日</p>
       <%= f.hidden_field :total_day, :value => @reservation.total_day %>
+      
 
       <p>人数 : <%= f.number_field :guests, :readonly => true %>人</p>
     
@@ -31,7 +33,6 @@
 
     <p class="final-atention">上記内容でよろしければ「予約を確定」を押してください</p>
     <% end %>
-    <% binding.pry %>
     
   </div>
   

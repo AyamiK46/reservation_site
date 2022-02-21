@@ -12,7 +12,8 @@ class Reservation < ApplicationRecord
   end
 
   def total
-    self.total_day.to_i * self.guests.to_i * self.room.fee
+    self.total_day.to_i * self.guests.to_i * self.room.fee.to_i
   end
+
 
 end
