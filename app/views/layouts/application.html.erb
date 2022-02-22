@@ -11,19 +11,20 @@
   </head>
 
   <body>
-  　<% if flash[:notice] %>
-  　  <p><%= flash[:notice] %></p>
-  　<% end %>
-  　<% if flash[:alert] %>
-  　  <p><%= flash[:alert] %></p>
-  　<% end %>
+
+  <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>
+  <% if flash[:alert] %>
+    <p><%= flash[:alert] %></p>
+  <% end %>
 
     
-  　
+  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-　  
+  
     <header class = "header">
     
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top"> 
@@ -37,15 +38,17 @@
         </li>
         
         <li class="container search-box">
-            <form class="area-search">
-              <input class="form-control top-form" type="search" placeholder="エリア" aria-label="Search">
-            </form>
+          <%= form_with(url: search_path, method: :get) do |f| %>
+            <%= f.text_field :search_area, params[:search_area], class="form-control top-form", placeholder: "エリア"%>
+            <%= f.submit %>
+          <% end %>
         </li>
         
         <li class="container search-box">
-            <form class="keyword-search">
-              <input class="form-control top-form" type="search" placeholder="キーワード" aria-label="Search">
-            </form>
+          <%= form_with(url: search_path, method: :get) do |f| %>
+            <%= f.text_field :search_keyword, params[:search_keyword], class="form-control top-form", placeholder: "キーワード"%>
+            <%= f.submit %>
+          <% end %>
         </li>
       </ul>
       </div>
@@ -77,7 +80,7 @@
   
   <%= yield %>
     
-   <footer class="footer">© 2020 POTEPAN.INC.</footer>
+  <footer class="footer">© 2020 POTEPAN.INC.</footer>
   </body>
 </html>
 

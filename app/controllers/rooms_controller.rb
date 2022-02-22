@@ -22,8 +22,14 @@ class RoomsController < ApplicationController
   end
 
   def search
-    @rooms = Room.where('items.title LIKE(?)', "%#{params[:search]}%").order(created_at: :desc)
-    @search_result = "#{params[:search]}"
+    if params[:search_area].present?
+      @rooms = Room.where('rooms.room_address LIKE(?)', "%#{params[:search_area]}%")
+    end
+
+    if params[:search_keyword].present?
+      @rooms = Room.where('rooms.room_address LIKE(?) OR rooms.room_name LIKE(?) OR rooms.room_introduction', 
+      "%#{params[:search_keyword]}%", "%#{params[:search_keyword]}%", "%#{params[:search_keyword]}%")
+    end
   end
 
   private

@@ -2,43 +2,57 @@
 <div class="jumbotron">
   <div class="container main-image wrap">
   <div class="row top-search-box">
+
     <div class="top-search-title">
       <h4>Potepan Shareでまだ体験したことのない旅をしよう</h4>
     </div>
-    
-    <div class="search">
-      <%= render 'items/search_form' %>
-    </div>
-    
-    <div class="search">
-      <%= render 'items/search_form' %>
-    </div>
+
+    <form class="top-search">
+      <div class = "area-search-top form-group">
+        <label class="area-box-title">エリア</label>
+        <div class="search_at_top">
+          <%= form_with(url: search_path, method: :get) do |f| %>
+            <%= f.text_field :search_area, params[:search_area], class="form-control form-area-box", placeholder: "東京"%>
+            <%= f.submit : "探す", class="search-button btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </form>
     
   </div>
   </div>
 </div>
 
+
 <div class="container">
 <div class="m-5">
-　<p class="recommend-area-title">おすすめのエリア</h5>
+
+  <p class="recommend-area-title">おすすめのエリア</p>
+
   <div class="row">
+
     <div class="place col-lg-3 col-6 wrap">
       <p class="recommend-area">TOKYO</p>
       <img class="place-picture" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg" alt="tokyo" class="img-fulied">
     </div>
+
     <div class="place col-lg-3 col-6 wrap">
       <p class="recommend-area">OSAKA</p>
       <img class="place-picture" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg" alt="osaka" class="img-fulied">        　　
     </div>
+
     <div class="place col-lg-3 col-6 wrap">
       <p class="recommend-area">KYOTO</p>
       <img class="place-picture" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg" alt="kyoto" class="img-fulied">
     </div>
+
     <div class="place col-lg-3 col-6 wrap">
       <p class="recommend-area">SAPPORO</p>
       <img class="place-picture"src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg" alt="sapporo" class="img-fulied">
     </div>
+
   </div>
+
 </div>
 </div>
 
