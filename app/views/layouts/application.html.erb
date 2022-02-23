@@ -20,34 +20,32 @@
   <% end %>
 
     
-  
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
+
     <header class = "header">
-    
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top"> 
       
       <div class="navbar-left">
       <ul class="navbar-nav ml-auto">
         <li class="container">
           <a class="navbar-brand" href="http://localhost:3000">
-            <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png" alt="logo" class="d-inline-block align-text-top"　width="200px" height="50px">
+            <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png" alt="logo" class="d-inline-block align-text-top" width="200px" height="50px">
           </a>
         </li>
         
         <li class="container search-box">
-          <%= form_with(url: search_path, method: :get) do |f| %>
-            <%= f.text_field :search_area, params[:search_area], class="form-control top-form", placeholder: "エリア"%>
-            <%= f.submit %>
+          <%= form_with(url: search_path, method: :get, local:true) do |f| %>
+            <%= f.text_field :search_area, class: "form-control top-form", placeholder: "エリア" %>
           <% end %>
         </li>
         
         <li class="container search-box">
-          <%= form_with(url: search_path, method: :get) do |f| %>
-            <%= f.text_field :search_keyword, params[:search_keyword], class="form-control top-form", placeholder: "キーワード"%>
-            <%= f.submit %>
+          <%= form_with(url: search_path, method: :get, local: true) do |f| %>
+            <%= f.text_field :search_keyword, class: "form-control top-form", placeholder: "キーワード" %>
           <% end %>
         </li>
       </ul>
@@ -75,11 +73,12 @@
       <% end %>
       </div>
   </nav>
-
   </header>
+
   
   <%= yield %>
     
+
   <footer class="footer">© 2020 POTEPAN.INC.</footer>
   </body>
 </html>
