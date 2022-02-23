@@ -1,4 +1,33 @@
-<h2>"<%= @search_result %>"の検索結果(<%= @rooms.count %>件)</h2>
-<% @rooms.each do |room| %>
-    <%= room.room_address %>
-<% end %>
+<div class="room_search_page m-5">
+
+<div class="room_search_header">
+    <h5>検索結果 : <%= @rooms.count %>件</h5>
+</div>
+
+<div class="room_search_table">
+<table class="table">
+
+    <tr class="search-table-title">
+        <th class="search-title">ルーム画像</th>
+        <th class="search-title">ルーム名</th>
+        <th class="search-title">住所</th>
+        <th class="search-title">ルーム紹介</th>
+        <th class="search-title">料金</th>
+    </tr>
+
+    <% @rooms.each do |room| %>
+    <tr class="search-table-body">
+        <td class="search-body">
+            <a class="room-image"><%= link_to image_tag(room.room_image.url), room_path(room.id) %></a>
+        </td>
+        <td class="search-body"><%= link_to room.room_name, room_path(room.id) %></td>
+        <td class="search-body"><%= room.address %></td>
+        <td class="search-body"><%= room.room_introduction %></td>
+        <td class="search-body">¥<%= room.fee %></td>
+    </tr>
+    <% end %>
+
+</table>
+</div>
+
+</div>
