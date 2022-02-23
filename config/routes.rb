@@ -3,8 +3,8 @@ Rails.application.routes.draw do
     root 'top#index'
 
   resources :rooms
-  get '/search' to "rooms#search"
-    
+  get "/search", to: "rooms#search"
+
   resources :reservations, only: [:new, :index, :create, :show] do
   end
   
