@@ -1,0 +1,27 @@
+
+<div class= "container-fluid user-profile">
+    <div class="row user-profile-page">
+    <table class= "user-profile-table mt-5">
+
+    <tr>
+        <th><h4 class="profile_page_title">アカウント</h4></th>
+    </tr>
+
+    <tr>
+        <th><p>メールアドレス</p></th>
+        <td><%= @user.email %></td>
+    </tr>
+
+    <tr>
+        <th><p>パスワード</p></th>
+        <td>*********</td>
+    </tr>
+
+    <tr>
+        <th><a class="btn btn-primary profile-to-edit-btn" href="/users/edit">編集</a></th>
+    </tr>
+
+    </table>
+    </div>
+</div>
+
