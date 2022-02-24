@@ -7,8 +7,8 @@
       <h4>Potepan Shareでまだ体験したことのない旅をしよう</h4>
     </div>
 
-    <form class="top-search">
-      <div class = "area-search-top form-group">
+    <div class="top-search">
+      <div class = "area-search-top">
         <label class="area-box-title">エリア</label>
         <div class="search_at_top">
           <%= form_with(url: search_path, method: :get, local: true) do |f| %>
@@ -17,7 +17,7 @@
           <% end %>
         </div>
       </div>
-    </form>
+    </div>
     
   </div>
   </div>
@@ -33,28 +33,28 @@
 
     <div class="place col-lg-3 col-6 wrap">
       <p class="recommend-area">TOKYO</p>
-      <a class="http://localhost:3000/search?search_area=%E6%9D%B1%E4%BA%AC">
+      <a href="http://localhost:3000/search?search_area=%E6%9D%B1%E4%BA%AC">
         <img class="place-picture" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg" alt="tokyo" class="img-fulied">
       </a>
     </div>
 
     <div class="place col-lg-3 col-6 wrap" href= "http://localhost:3000/search?search_area=東京">
       <p class="recommend-area">OSAKA</p>
-      <a href = "http://localhost:3000/search?search_area=%E5%A4%A7%E9%98%AA">
+      <a href="http://localhost:3000/search?search_area=%E5%A4%A7%E9%98%AA">
         <img class="place-picture" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg" alt="osaka" class="img-fulied"> 
       </a>
     </div>
 
     <div class="place col-lg-3 col-6 wrap">
       <p class="recommend-area">KYOTO</p>
-      <a href = "http://localhost:3000/search?search_area=%E4%BA%AC%E9%83%BD">
+      <a href="http://localhost:3000/search?search_area=%E4%BA%AC%E9%83%BD">
         <img class="place-picture" src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg" alt="kyoto" class="img-fulied">
       </a>
     </div>
 
     <div class="place col-lg-3 col-6 wrap">
       <p class="recommend-area">SAPPORO</p>
-      <a href = "http://localhost:3000/search?search_area=%E6%9C%AD%E5%B9%8C">
+      <a href="http://localhost:3000/search?search_area=%E6%9C%AD%E5%B9%8C">
       <img class="place-picture"src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg" alt="sapporo" class="img-fulied">
     </div>
 
