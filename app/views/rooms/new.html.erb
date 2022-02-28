@@ -1,23 +1,13 @@
-<div class="container-fluid mt-5">
-  <div class="row">
-    <div class="col-2 side-bar-content">
-        <ul>
-          <li class="room-content">
-            <a href="/rooms/new" class="basic-info">基本情報</a>
-          </li>
-        </ul>
-    </div>
 
-    <div class="col-10">
-      <div class="registration_for_room">
-      <div class = "roomHeader">
+<div class="registration_for_room">
+      <div class = "roomHeader mt-5">
         <p class="room-content">ルーム情報登録</p>
       </div>
     
         <%= form_with model:@room, local:true do |f| %>
         <%= hidden_field_tag :id, @room.id %>
 
-        <table class="table">
+        <table class="table room-registration-table">
           <div class = "form-group col-xs-4 room-content">
           <tr>
             <th><label>ルーム名 <span class = "must">必須</span></label></th>
@@ -62,6 +52,4 @@
       </div>
       </div>
     </div>
-
-  </div>
 </div>

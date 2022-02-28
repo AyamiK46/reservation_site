@@ -1,13 +1,13 @@
-<div class="new_reservation_page container m-3">
+<div class="new_reservation_page container m-5">
   <div class = "row">
 
-    <div class="col-lg-8 col-md-8 col-sm-8">
+    <div class="col-lg-8 col-md-12 col-sm-12">
     <div class="show-detail">
       <div class="big-room-picture">
         <%= image_tag(@room.room_image.url(:thumb)) %>
       </div>
 
-      <table class="table">
+      <table class="room-detail-table">
         <tr>
           <th>
             <div class="owner-icon">
@@ -37,7 +37,7 @@
     </div>
 
 
-    <div class="col-lg-4 col-md-4 col-sm-4">
+    <div class="col-lg-4 col-md-12 col-sm-12">
       <div class="reservation_system_bar">
 
         <p class="show_price">¥ <%= @room.fee %> / 日</p>

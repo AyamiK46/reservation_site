@@ -55,7 +55,12 @@
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            メニュー
+          <%= current_user.name %>
+          <% if current_user.user_image? %>
+            <%= image_tag current_user.user_image.url, class:"user-icon" %>
+          <% else %>
+            <%= image_tag "/assets/default.png", class:"user-icon" %>
+          <% end %> 
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenu">
             <a class="dropdown-item" href="/rooms/new">ルーム登録</a>

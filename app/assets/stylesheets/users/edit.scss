@@ -1,7 +1,10 @@
 
+h4, p{
+    font-family: verdana, arial, helvetica, sans-serif;
+}
 
 .form-wrapper{
-    max-width: 600px;
+    max-width: 800px;
     text-align: center;
     padding: 24px;
     margin: 70px auto;
@@ -10,28 +13,36 @@
     border: 1px #ddd solid;
 }
 
-.form-wrapper div{
-    width: 50%;   
+.form-wrapper div{  
     margin: 0 auto;  
 }
 
-h4, p{
-    font-family: verdana, arial, helvetica, sans-serif;
+table{
+    box-sizing: border-box;
 }
 
 .account-form-title{
+    white-space: nowrap;
     margin-bottom:0.5rem;
     font-family: verdana, arial, helvetica, sans-serif;
 }
 
+.form-wrapper th{
+    text-align: left;
+}
+
 .account-label{
-    margin-top:1rem;
     font-size:13px;
+    margin-top: 2rem;
+}
+
+.account-form{
+    margin-top: 2rem;
 }
 
 .form-submit-btn{
     margin-top: 1.5rem;
-    width:50%;
+    width:100%;
     text-align:center;
     font-size:13px;
 }
@@ -39,7 +50,7 @@ h4, p{
 .account-back-button{
     margin-top: 0.5rem;
     margin-bottom: 3rem;
-    width:50%;
+    width:100%;
     text-align:center;
     border: 1px #000 solid; 
     font-size:13px;

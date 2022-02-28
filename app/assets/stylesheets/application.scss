@@ -37,7 +37,7 @@ button {
 
 .nav-link {
     display:table-cell;
-    padding: 10px 40px;
+    padding-left: 3rem;
 }
 
 .navbar-expand-sm {
@@ -74,4 +74,26 @@ footer{
 .index-body{
     vertical-align: middle;
     white-space: nowrap;
+}
+
+.icon-itself{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-top:1.5rem;
+}
+
+.user-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: border-box;
+}
+
+.user-icon-setting{
+    float:left;
 }

@@ -1,11 +1,19 @@
 
 
+.show-detail{
+    box-sizing: border-box;
+}
+
 .big-room-picture{
     margin-top:3rem;
 }
 
 .owner-icon{
     display: flex;
+}
+
+.room-detail-table{
+    float:left;
 }
 
 .icon-itself{
@@ -17,7 +25,9 @@
 }
 
 .room_area_detail{
-    margin-top:1.5rem;
+    margin-top: 3rem;
+    vertical-align: center;
+    text-align: left;
 }
 
 .show_room_name{
@@ -40,7 +50,8 @@
 
 
 .reservation_system_bar{
-    margin-top:3rem;
+    margin:3rem auto;
     padding: 1.25rem;
     border: 1px solid #eaedef;
+    box-sizing: border-box;
 }

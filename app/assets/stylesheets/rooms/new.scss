@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .registration_for_room{
-    max-width:100%;
+    max-width:80%;
     text-align: center;
-    margin:4rem auto;
+    margin:8rem auto;
     padding: 1.5rem;
     background-color: white;
     border-radius: 4px;
@@ -17,20 +17,11 @@
 }
 
 
-.side-bar-content{
-    padding-top:1.25rem;
-    border-right: 1px gainsboro solid;
-}
-
 .room-content{
     white-space: nowrap;    
 }
 
-.basic-info{
-    text-decoration: none;
-    text-align:center;
-    border-right: 3px solid hsl(212, 72%, 59%);
-}
+
 
 label{
     white-space: nowrap;
@@ -46,6 +37,7 @@ label{
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
+    box-sizing: border-box;
 }
 
 .making_room_button{
