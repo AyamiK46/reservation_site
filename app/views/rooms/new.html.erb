@@ -1,0 +1,55 @@
+
+<div class="registration_for_room">
+      <div class = "roomHeader mt-5">
+        <p class="room-content">ルーム情報登録</p>
+      </div>
+    
+        <%= form_with model:@room, local:true do |f| %>
+        <%= hidden_field_tag :id, @room.id %>
+
+        <table class="table room-registration-table">
+          <div class = "form-group col-xs-4 room-content">
+          <tr>
+            <th><label>ルーム名 <span class = "must">必須</span></label></th>
+            <td><%= f.text_field :room_name, class: "form-control new_form", placeholder:"ルーム名を入力" %></td>
+          </tr>
+          </div>
+    
+          <div class="form-group col-xs-4 room-content">
+          <tr>
+            <th><label>ルーム紹介 <span class = "must">必須</span></label></th>
+            <td><%= f.text_area :room_introduction, class: "form-control new_form", placeholder: "ルーム説明を入力"%></td>
+          </tr>
+          </div>
+        
+          <div class="form-group col-xs-4 room-content">
+          <tr>
+            <th><label>料金 <span class = "must">必須</span></label></th>
+            <td><%= f.text_field :fee, class: "form-control new_form", placeholder: "一日あたりの料金を入力" %></td>
+          </tr>
+          </div>
+        
+          <div class="form-group col-xs-4 room-content">
+          <tr>
+            <th>住所 <label><span class = "must">必須</span></label></th>
+            <td><%= f.text_field :address, class: "form-control new_form", placeholder: "住所を入力" %></td>
+          </tr>
+    
+          <div class="form-group col-xs-4 room-content">
+          <tr>
+            <th>ルーム画像 <label><span class = "must">必須</span></label></th>
+            <td><%= f.file_field :room_image %></td>
+          </tr>
+    
+          </div>
+        </table>
+    
+        <div class="making_room_button">
+          <%= f.submit "登録", class: "btn btn-primary making_room"%>
+        </div>
+    
+        <% end %>
+      </div>
+      </div>
+    </div>
+</div>

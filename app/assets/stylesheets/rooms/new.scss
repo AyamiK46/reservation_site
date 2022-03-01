@@ -1,0 +1,54 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.registration_for_room{
+    max-width:80%;
+    text-align: center;
+    margin:8rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+}
+
+.roomHeader{
+    margin-top:1.25rem;
+}
+
+
+.room-content{
+    white-space: nowrap;    
+}
+
+
+
+label{
+    white-space: nowrap;
+}
+
+.must{
+    white-space: nowrap;
+}
+
+.new_form{
+    display: block;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+}
+
+.making_room_button{
+    margin-top: 2rem;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    flex: 0 0 16.666667%;
+}
+
+.making_room{
+    padding:auto 40px;
+}
+

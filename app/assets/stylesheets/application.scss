@@ -1,0 +1,99 @@
+
+@import "bootstrap";
+
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+@import 'common';
+
+@import "top";
+@import "users/sign_up";
+@import "users/sign_in";
+@import "users/edit";
+@import "users";
+
+@import "rooms";
+@import "rooms/new";
+@import "rooms/show";
+@import "rooms/search";
+
+@import "reservations";
+@import "reservations/new";
+@import "reservations/show";
+
+li{
+    list-style: none;
+}
+
+button {
+    white-space: nowrap;
+}
+
+.before_login_button{
+    margin-left:3px;
+    text-align: center;
+    font-size:13px;
+}
+
+.nav-link {
+    display:table-cell;
+    padding-left: 3rem;
+}
+
+.navbar-expand-sm {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.search-box{
+    margin-top: 1%;
+}
+
+.navbar-right{
+    margin-left:right;
+}
+
+.dropdown-menu{
+    margin-right:20px;
+}
+.dropdown-item{
+    font-size:13px;
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    padding-top: 90px;
+    background-color: #111;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    font-size:8px;
+}
+
+.index-body{
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.icon-itself{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-top:1.5rem;
+}
+
+.user-icon{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: border-box;
+}
+
+.user-icon-setting{
+    float:left;
+}

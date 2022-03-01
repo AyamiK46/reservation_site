@@ -1,0 +1,39 @@
+
+
+<div class="reservation_confirm_bar">
+
+  <div class= "reservation_confirm_page">
+    
+    <p class="confirm_title">予約内容確認</p>
+    <%= form_with model: @reservation do |f| %>
+    
+      <%= hidden_field_tag :id, @room.id %>
+
+      <p class="show_price">¥<%= @room.fee %> / 日</p>
+      
+      <%= f.label :start, "開始日" %>
+      <%= f.text_field :start, :readonly => true %>
+    
+      <%= f.label:end_date, "終了日" %>
+      <%= f.text_field :end_date, :readonly => true %>
+    
+      <p>使用日数：<%= @reservation.total_day %> 日</p>
+      <%= f.hidden_field :total_day, :value => @reservation.total_day %>
+      
+
+      <p>人数 : <%= f.number_field :guests, :readonly => true %>人</p>
+    
+      <label>合計金額:<%= @reservation.total %></label>
+      <%= f.hidden_field :total, :value => @reservation.total %>
+
+      <div class="reserve_room">
+        <%= f.submit "予約を確定", class: "btn btn-primary btn-block" %>
+        <%= f.submit "ルーム詳細に戻る", name: :back, class: "btn btn-secondary btn-block" %>
+      </div>
+
+    <p class="final-atention">上記内容でよろしければ「予約を確定」を押してください</p>
+    <% end %>
+    
+  </div>
+  
+</div>
